@@ -15,17 +15,17 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header>
+	<div class="header">
 		
-	</header>
+	</div>
 	
-	<article>
+	<div class="main">
 		
-	</article>
+	</div>
 	
-	<footer>
+	<div class="footer">
 		
-	</footer>
+	</div>
 	
 	<?php wp_footer();?>
 </body>
