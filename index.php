@@ -10,7 +10,7 @@
 	<link type="image/x-icon" rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
 	<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/screenshot.png" />
 	
-	<title><?php bloginfo('name'); ?> | <?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
+	<title><?php is_home() ? bloginfo('name') : wp_title(''); ?></title>
 	<?php wp_head();?>
 </head>
 
