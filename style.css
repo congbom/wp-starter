@@ -26,6 +26,10 @@ Version: 1.0
 .clearfix:after {
     clear: both;
 }
+img {
+    max-width: 100%;  
+	height: auto;	
+}
 
 
 
@@ -53,12 +57,13 @@ Version: 1.0
     line-height: 22px;
 }
 .the-content li {
-    margin: 6.5px 0 6.5px 40px;    
-    list-style: disc;
+	margin:6.5px 0 6.5px 40px;
 }
-.the-content img {
-    max-width: 100%;  
-	height: auto;	
+.the-content ul li {
+	list-style: disc ;
+}
+.the-content ol li {
+	list-style: decimal;
 }
 
 
