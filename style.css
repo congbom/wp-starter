@@ -26,6 +26,12 @@ Version: 1.0
 .clearfix:after {
     clear: both;
 }
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
 img {
     max-width: 100%;  
 	height: auto;	
@@ -136,6 +142,11 @@ a img.aligncenter {
     padding: 0 4px 5px;
 }
 
+
+/* Tablet landscape */
+@media screen and (max-width: 1250px) {	
+
+}
 
 /* Tablet portrait */
 @media screen and (max-width: 1000px) {   	
