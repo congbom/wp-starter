@@ -27,7 +27,7 @@ function enqueue_scripts_styles() {
 
 
 // /* Include partials */
-// include_once(get_template_directory() . '/foldername/finename.php');
+// include_once(get_template_directory() . '/includes/post-type.php');
 
 
 // /* Thumbnail */
