@@ -39,6 +39,19 @@ function enqueue_scripts_styles() {
 	// add_image_size('large', 1024, 0, true );
 // }
 
+
+// /* Get attachment image source by ID */
+// function timevn_attachment_src( $attachmentID, $size = 'full' ) {
+// 	$imageSrc = get_template_directory_uri() . '/images/no-thumbnail.png';
+
+//     if( wp_attachment_is_image( $attachmentID ) ) {
+//         $imageInfo = wp_get_attachment_image_src( $attachmentID, $size);
+//         $imageSrc = $imageInfo[0];
+//     }
+
+//     return $imageSrc;
+// }
+
 // /* Load theme textdomain */
 // add_action ('init', 'theme_init');
 // function theme_init(){
