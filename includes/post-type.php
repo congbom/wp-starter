@@ -1,7 +1,7 @@
 <?php
-/* Register activiti post type */
-add_action('init', 'posttype_posttypename');
-function posttype_posttypename() {
+/* Register post type */
+add_action('init', 'register_post_type_posttypename');
+function register_post_type_posttypename() {
 	$labels = array(
 		'name' => 'Posttypename',
 		'menu_name' => 'Posttypenames',
@@ -28,7 +28,7 @@ function posttype_posttypename() {
 }
 
 
-/* Register activity taxonomy */
+/* Register Posttypename taxonomy */
 add_action('init', 'register_posttypename_category');
 function register_posttypename_category() {
 	register_taxonomy('posttypename_category', 'posttypename', array(
