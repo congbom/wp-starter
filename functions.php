@@ -13,7 +13,7 @@ function enqueue_scripts_styles() {
 		'homeurl' => home_url(),
 	);
 	
-	wp_localize_script( 'scripts', 'wp_script_data', $wp_script_data );
+	wp_localize_script( 'scripts', 'wp_vars', $wp_script_data );
 }
 
 

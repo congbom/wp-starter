@@ -36,6 +36,9 @@ img {
     max-width: 100%;  
 	height: auto;	
 }
+body {
+    -webkit-text-size-adjust: 100%;
+}
 
 
 
@@ -55,8 +58,7 @@ img {
 .the-content h5,
 .the-content h6,
 .the-content ul,
-.the-content table,
-.the-content iframe {
+.the-content table {
     margin: 13px 0;
 }
 .the-content p {

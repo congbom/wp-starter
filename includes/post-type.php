@@ -38,6 +38,7 @@ function register_posttypename_category() {
 			'menu_name' => 'Categories'
 		),
 		"hierarchical" => true,
+		"rewrite" => array('slug' => 'posttypenames'),
 		"show_admin_column" => true,			
 		'show_in_nav_menus' => true
 	));
