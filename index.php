@@ -40,7 +40,7 @@ if( is_paged() ) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="author" content="<?php echo str_replace('"', '', $metaProperty['author']);?>" />
 	<meta name="description" content="<?php echo str_replace('"', '', $metaProperty['description']);?>" />
-	<meta property="fb:app_id" content="175344015973613" />	
+	<meta property="fb:app_id" content="<?php echo $metaProperty['app_id'];?>" />	
 	<meta property="og:type" content='<?php echo $metaProperty['type'];?>' />
 	<meta property="og:title" content="<?php echo str_replace('"', '', $metaProperty['title']);?>" />
 	<meta property="og:url" content="<?php echo $metaProperty['url'];?>" />
