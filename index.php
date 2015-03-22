@@ -38,15 +38,14 @@ if( is_paged() ) {
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="google-site-verification" content='ZVXkSVgd9LDf_benpZ24ATsRxuGWVHz-4REJlt1asnU' />
-	<meta name="author" content='<?php echo $metaProperty['author'];?>' />
-	<meta name="description" content='<?php echo $metaProperty['description'];?>' />
-	<meta property="fb:app_id" content='<?php echo $metaProperty['app_id'];?>' />	
+	<meta name="author" content="<?php echo str_replace('"', '', $metaProperty['author']);?>" />
+	<meta name="description" content="<?php echo str_replace('"', '', $metaProperty['description']);?>" />
+	<meta property="fb:app_id" content="175344015973613" />	
 	<meta property="og:type" content='<?php echo $metaProperty['type'];?>' />
-	<meta property="og:title" content='<?php echo $metaProperty['title'];?>' />
-	<meta property="og:url" content='<?php echo $metaProperty['url'];?>' />
-	<meta property="og:image" content='<?php echo $metaProperty['image'];?>' />
-	<meta property="og:description" content='<?php echo $metaProperty['description'];?>' />
+	<meta property="og:title" content="<?php echo str_replace('"', '', $metaProperty['title']);?>" />
+	<meta property="og:url" content="<?php echo $metaProperty['url'];?>" />
+	<meta property="og:image" content="<?php echo $metaProperty['image'];?>" />
+	<meta property="og:description" content="<?php echo str_replace('"', '', $metaProperty['description']);?>" />
 	<title><?php echo $metaProperty['title'];?></title>
 	<link type="image/x-icon" rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
 	<?php wp_head();?>
