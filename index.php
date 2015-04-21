@@ -7,6 +7,12 @@
 	'description' => get_bloginfo('description'),
 	'author' => 'Time Universal',
 );
+if( is_post_type_archive() ) {
+	$currentPostType = get_query_var('post_type');
+	$postTypeObject = get_post_type_object( $currentPostType );
+	$metaProperty['title'] = $postTypeObject->labels->name;
+	$metaProperty['description'] = $postTypeObject->description;
+}
 if( is_tax() || is_category() || is_tag() ) {
 	$metaProperty['title'] = single_term_title( '', false ) .' | '. get_bloginfo('name');
 	$metaProperty['description'] = term_description() ? term_description() : $metaProperty['description'];
