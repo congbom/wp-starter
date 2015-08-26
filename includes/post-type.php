@@ -3,9 +3,10 @@
 add_action('init', 'register_post_type_posttypename');
 function register_post_type_posttypename() {
 	$labels = array(
-		'name' => 'Posttypename',
+		'name' => 'Posttypenames',
 		'menu_name' => 'Posttypenames',
-		'all_items' => 'All Posts'
+		'singular_name' => 'Posttypename',
+		'all_items' => 'All Posttypenames'
 	);
 
 	$args = array(

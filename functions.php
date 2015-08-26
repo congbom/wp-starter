@@ -3,6 +3,8 @@
 /* Adding Enqueue scripts */
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts_styles' );
 function enqueue_scripts_styles() {
+    wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext,vietnamese,cyrillic,cyrillic-ext' );
+	wp_enqueue_style( 'addons', get_template_directory_uri() .'/addons.css' );
 	wp_enqueue_style( 'styles', get_stylesheet_uri() );
     wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'addons', get_template_directory_uri() . '/scripts/addons.js', array(), '1.0' );
@@ -17,11 +19,18 @@ function enqueue_scripts_styles() {
 }
 
 
+/* Enqueue scripts Back-end */
+add_action( 'admin_enqueue_scripts', 'enqueue_custom_admin_style' );
+function enqueue_custom_admin_style( ) {
+    wp_enqueue_style( 'admins', get_template_directory_uri() . '/admin.css');
+}
+
+
+
 // /* Register Menus */
 // register_nav_menus(
     // array(
-        // 'head-menu' => 'Head Menu',
-        // 'foot-menu' => 'Foot Menu',
+        // 'main_menu' => 'Main Menu',
     // )
 // );
 
@@ -41,8 +50,8 @@ function enqueue_scripts_styles() {
 
 
 // /* Get attachment image source by ID */
-// function timevn_attachment_src( $attachmentID, $size = 'full' ) {
-// 	$imageSrc = get_template_directory_uri() . '/images/no-thumbnail.png';
+// function timevn_attachment_src( $attachmentID, $size = 'thumbnail' ) {
+//     $imageSrc = get_template_directory_uri() . '/images/default-'. $size .'.png';
 
 //     if( wp_attachment_is_image( $attachmentID ) ) {
 //         $imageInfo = wp_get_attachment_image_src( $attachmentID, $size);
@@ -51,6 +60,7 @@ function enqueue_scripts_styles() {
 
 //     return $imageSrc;
 // }
+
 
 // /* Load theme textdomain */
 // add_action ('init', 'theme_init');
