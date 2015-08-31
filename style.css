@@ -64,19 +64,19 @@ body {
 .the-content h6,
 .the-content ul,
 .the-content table {
-    margin: 13px 0;
+    margin-bottom: 20px;
 }
 .the-content p {
     line-height: 22px;
 }
 .the-content li {
-	margin:6.5px 0 6.5px 40px;
+    margin: 0 0 10px 40px;
 }
 .the-content ul li {
-	list-style: disc ;
+    list-style: disc ;
 }
 .the-content ol li {
-	list-style: decimal;
+    list-style: decimal;
 }
 
 
