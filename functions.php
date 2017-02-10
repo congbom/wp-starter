@@ -36,28 +36,30 @@ function sanitize_file_name_remove_accents( $filename ) {
 }
 
 
-// /* Register Menus */
-// register_nav_menus(
-    // array(
-        // 'main_menu' => 'Main Menu',
-    // )
-// );
+/* Register Menus */
+add_action( 'init', 'register_my_menu' );
+function register_my_menu() {
+	register_nav_menus( array(
+	    'main_menu' => 'Main Menu',
+	));
+}
 
 
+/* Add theme support */
+add_action( 'after_setup_theme', 'custom_theme_setup' );
+function custom_theme_setup() {
+	add_theme_support( 'title-tag' );
 
-
-// /* Thumbnail */
-// if ( function_exists( 'add_theme_support' ) ) {
-	// add_theme_support( 'post-thumbnails' );  
-    // add_image_size('thumbnail', 300, 300, true );
+	add_theme_support( 'post-thumbnails' );  
+ 	// add_image_size('thumbnail', 300, 300, true );
 	// add_image_size('small', 600, 400, true );
 	// add_image_size('medium', 900, 0, true );
 	// add_image_size('large', 1400, 0, true );
-// }
+}
 
 
 // /* Get attachment image source by ID */
-// function timevn_attachment_src( $attachmentID, $size = 'thumbnail' ) {
+// function get_attachment_src_url( $attachmentID, $size = 'thumbnail' ) {
 //     $imageSrc = get_template_directory_uri() . '/images/default-'. $size .'.png';
 
 //     if( wp_attachment_is_image( $attachmentID ) ) {
