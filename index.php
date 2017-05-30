@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	
-	<?php wp_head();?>
-</head>
+<?php get_header(); ?>
 
-<body <?php body_class(); ?>>
-	<div class="header">
-		
-	</div>
-	
-	<div class="main">
-		<?php the_content();?>
-	</div>
-	
-	<div class="footer">
-		
-	</div>
-	
-	<?php wp_footer();?>
-</body>
-</html>
+<div class="container">
+    <div class="starter-template" style="padding: 40px 15px; text-align: center;">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    </div>
+</div><!-- /.container -->
+
+<?php get_footer(); ?>
