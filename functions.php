@@ -1,14 +1,8 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'enqueue_scripts_styles' );
-function enqueue_scripts_styles() {
-	/* CSS */
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() .'/vendors/bootstrap/css/bootstrap.min.css' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() .'/vendors/font-awesome/css/font-awesome.min.css' );
-	wp_enqueue_style( 'styles', get_stylesheet_uri() );
+add_action( 'wp_enqueue_scripts', 'wp_starter_theme_enqueue_scripts' );
+function wp_starter_theme_enqueue_scripts() {
 
-	/* JS */
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/vendors/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '', true );
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/scripts.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/bundle.js', '', '', true );
 
 	$wp_script_data = array(
 		'ajaxurl' => admin_url('admin-ajax.php' ),
@@ -19,9 +13,9 @@ function enqueue_scripts_styles() {
 }
 
 
-add_action( 'after_setup_theme', 'dw_pagebold_setup' );
-function dw_pagebold_setup() {
-	load_theme_textdomain( 'dw-pagebold', get_template_directory() . '/languages' );
+add_action( 'after_setup_theme', 'wp_starter_theme_setup' );
+function wp_starter_theme_setup() {
+	load_theme_textdomain( 'wp-starter', get_template_directory() . '/languages' );
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -34,7 +28,7 @@ function dw_pagebold_setup() {
 	add_theme_support( 'title-tag' );
 
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'dw-pagebold' ),
+		'primary' => __( 'Primary Menu', 'wp-starter' ),
 	) );
 
 	add_theme_support( 'html5', array(
