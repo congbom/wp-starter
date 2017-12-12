@@ -1,15 +1,31 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'wp_starter_theme_enqueue_scripts' );
-function wp_starter_theme_enqueue_scripts() {
+/* Enqueue scripts */
+add_action( 'wp_enqueue_scripts', 'bizsplus_enqueue_scripts' );
+function bizsplus_enqueue_scripts() {
+	$theme_data = wp_get_theme(); 
+	$theme_version = $theme_data->get( 'Version' );
 
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/bundle.js', '', '', true );
+	wp_enqueue_style( 'styles', get_template_directory_uri() . '/distribute/styles.css', array(), $theme_version, 'all' );
+	wp_enqueue_script( 'bundle', get_template_directory_uri() . '/distribute/bundle.js#asyncload', array(), $theme_version, true );
 
 	$wp_script_data = array(
 		'ajaxurl' => admin_url('admin-ajax.php' ),
 		'homeurl' => home_url(),
 	);
 	
-	wp_localize_script( 'scripts', 'wp_vars', $wp_script_data );
+	wp_localize_script( 'bundle', 'wp_vars', $wp_script_data );
+}
+
+
+/* Async load */
+add_filter( 'clean_url', 'bizsplus_async_scripts', 11, 1 );
+function bizsplus_async_scripts($url) {
+    if ( strpos( $url, '#asyncload') === false )
+        return $url;
+    else if ( is_admin() )
+        return str_replace( '#asyncload', '', $url );
+    else
+	return str_replace( '#asyncload', '', $url )."' async='async"; 
 }
 
 
