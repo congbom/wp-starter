@@ -1,7 +1,7 @@
 <?php
 /* Enqueue scripts */
-add_action( 'wp_enqueue_scripts', 'bizsplus_enqueue_scripts' );
-function bizsplus_enqueue_scripts() {
+add_action( 'wp_enqueue_scripts', 'wp_starter_theme_enqueue_scripts' );
+function wp_starter_theme_enqueue_scripts() {
 	$theme_data = wp_get_theme(); 
 	$theme_version = $theme_data->get( 'Version' );
 
@@ -18,8 +18,8 @@ function bizsplus_enqueue_scripts() {
 
 
 /* Async load */
-add_filter( 'clean_url', 'bizsplus_async_scripts', 11, 1 );
-function bizsplus_async_scripts($url) {
+add_filter( 'clean_url', 'wp_starter_theme_async_scripts', 11, 1 );
+function wp_starter_theme_async_scripts($url) {
     if ( strpos( $url, '#asyncload') === false )
         return $url;
     else if ( is_admin() )
