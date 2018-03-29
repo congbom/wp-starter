@@ -51,3 +51,10 @@ function wp_starter_theme_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
 }
+
+
+/* Remove special characters from Uploaded files */
+add_filter('sanitize_file_name', 'sanitize_file_name_remove_accents', 10);
+function sanitize_file_name_remove_accents( $filename ) {
+	return remove_accents( $filename );
+}
