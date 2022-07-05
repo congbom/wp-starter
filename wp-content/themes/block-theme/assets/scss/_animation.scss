@@ -1,0 +1,98 @@
+@keyframes resetElement {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Animation */
+.animation {
+    animation-fill-mode: both;
+    animation-duration: 1s;
+
+    &.fade-zoom {
+        opacity: 0;
+        transform: scale(0);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.fade-in {
+        opacity: 0;
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.fade-up {
+        opacity: 0;
+        transform: translateY(4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.fade-down {
+        opacity: 0;
+        transform: translateY(-4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.fade-left {
+        opacity: 0;
+        transform: translateX(-4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.fade-right {
+        opacity: 0;
+        transform: translateX(4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.move-up {
+        transform: translateY(4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.move-down {
+        transform: translateY(-4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.move-left {
+        transform: translateX(-4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+
+    &.move-right {
+        transform: translateX(4rem);
+
+        &.animated {
+            animation-name: resetElement;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+// @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap&subset=vietnamese');
+
+/* Custom Variables */
+@import "variables";
+
+/* Bootstrap Configuration */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+/* Bootstrap Layout & components */
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+
+/* Bootstrap Helpers */
+@import "~bootstrap/scss/helpers";
+
+/* Custom Utilities */
+@import "common";
+@import "utilities";
+
+/* Bootstrap Utilities API */
+@import "~bootstrap/scss/utilities/api";
+
+
+/* Add-ons */
+.wp-block {
+	max-width: 1440px;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mw-960 {
+	max-width: 960px;
+}

@@ -1,0 +1,35 @@
+$primary:   #0073aa;
+$secondary: #7b90ff;
+
+$spacers: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.50rem,
+    3: 1.00rem,
+    4: 2.00rem,
+    5: 3.00rem,
+    6: 4.50rem,
+    7: 6.00rem,
+    8: 7.50rem,
+    9: 9.0rem,
+    fluid: 8.33333%
+);
+
+$aspect-ratios: ();
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 600px,
+    md: 750px,
+    lg: 1000px,
+    xl: 1250px,
+    xxl: 1500px
+);
+
+$container-max-widths: (
+    sm: 572px,
+    md: 752px,
+    lg: 992px,
+    xl: 1232px,
+    xxl: 1472px
+);
