@@ -1,0 +1,38 @@
+.timevn-form-table td {
+	padding-right: 0;
+}
+
+.timevn-field-single input,
+.timevn-field-multiple input,
+.timevn-field-single textarea,
+.timevn-field-multiple textarea {
+	width: 100%;
+	margin: 0;
+}
+
+.timevn-field-multiple {
+	margin-bottom: 4px;
+	padding-right: 40px;
+	position: relative;
+}
+
+.timevn-field-regular {
+	max-width: 25em;
+}
+
+.timevn-delete-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 36px;
+	color: #a00;
+}
+
+.timevn-field-image {
+	position: relative;
+}
+.timevn-field-image .timevn-delete-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+}

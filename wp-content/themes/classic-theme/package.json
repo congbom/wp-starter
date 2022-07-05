@@ -1,0 +1,30 @@
+{
+	"name": "wp-starter-theme",
+	"version": "1.0.0",
+	"description": "",
+	"author": "",
+	"license": "ISC",
+	"main": "assets/dist/main.js",
+	"scripts": {
+		"dev": "webpack",
+		"build": "webpack"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.2.5",
+		"css-loader": "^5.2.4",
+		"file-loader": "^6.2.0",
+		"mini-css-extract-plugin": "^1.6.0",
+		"node-sass": "^7.0.1",
+		"postcss": "^8.2.15",
+		"postcss-loader": "^5.2.0",
+		"precss": "^3.1.2",
+		"sass-loader": "^12.6.0",
+		"style-loader": "^2.0.0",
+		"webpack": "^5.36.2",
+		"webpack-cli": "^4.6.0"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.10.2",
+		"bootstrap": "^5.1.3"
+	}
+}

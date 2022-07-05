@@ -1,10 +1,17 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
 
-<div class="container">
-   	<div class="starter-template" style="padding-top: 125px; text-align: center;">
-		<h1>Bootstrap starter template</h1>
-		<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-	</div>
-</div><!-- /.container -->
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define( 'WP_USE_THEMES', true );
 
-<?php get_footer(); ?>
+/** Loads the WordPress Environment and Template */
+require __DIR__ . '/wp-blog-header.php';

@@ -1,0 +1,114 @@
+@keyframes elementReset {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeZoom {
+    0 {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation */
+.animation {
+    animation-fill-mode: both;
+    animation-duration: 1s;
+
+    &.fade-zoom {
+        opacity: 0;
+
+        &.animated {
+            animation-name: fadeZoom;
+            animation-timing-function: ease-in;
+        }
+    }
+
+    &.fade-in {
+        opacity: 0;
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.fade-up {
+        opacity: 0;
+        transform: translateY(64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.fade-down {
+        opacity: 0;
+        transform: translateY(-64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.fade-left {
+        opacity: 0;
+        transform: translateX(-64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.fade-right {
+        opacity: 0;
+        transform: translateX(64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.move-up {
+        transform: translateY(64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.move-down {
+        transform: translateY(-64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.move-left {
+        transform: translateX(-64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+
+    &.move-right {
+        transform: translateX(64px);
+
+        &.animated {
+            animation-name: elementReset;
+        }
+    }
+}

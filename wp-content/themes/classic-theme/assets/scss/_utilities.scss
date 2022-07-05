@@ -1,0 +1,49 @@
+$utilities: map-merge(
+    $utilities, 
+    (
+        "opacity": (
+            property: opacity,
+            state: hover,
+            values: (
+                0: 0,
+                25: .25,
+                50: .5,
+                75: .75,
+                100: 1,
+            ),
+        ),
+        "aspect-ratios": (
+            class: ratio,
+            responsive: true,
+            property: --bs-aspect-ratio,
+            values: (
+                "1x1": 100%,
+                "1x2": 200%,
+                "2x1": 50%,
+                "3x2": calc(2 / 3 * 100%),
+                "2x3": calc(3 / 2 * 100%),
+                "4x3": calc(3 / 4 * 100%),
+                "3x4": calc(4 / 3 * 100%),
+                "16x9": calc(9 / 16 * 100%),
+                "9x16": calc(16 / 9 * 100%),
+            ),
+        ),
+        "object-fit": (
+            property: object-fit,
+            values: cover contain fill inherit initial none revert scale-down unset,
+        ),
+        "object-position": (
+            property: object-position,
+            values: left right top bottom,
+        ),
+        "z-index": (
+            property: z-index,
+            values: 0 1 2 3 4 5 6 7 8 9,
+        ),
+        "animation-delay": (
+            class: delay,
+            property: animation-delay,
+            values: 000ms 100ms 200ms 300ms 400ms 500ms 600ms 700ms 800ms 900ms 0s 1s 2s 3s 4s 5s 6s 7s 8s 9s,
+        ),
+    )
+);

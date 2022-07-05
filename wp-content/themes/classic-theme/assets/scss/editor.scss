@@ -1,0 +1,34 @@
+/* Custom Variables */
+@import "variables";
+
+/* Bootstrap Configuration */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+/* Bootstrap Helpers */
+@import "~bootstrap/scss/helpers";
+
+/* Custom Utilities */
+@import "common";
+@import "utilities";
+
+/* Bootstrap Utilities API */
+@import "~bootstrap/scss/utilities/api";
+
+
+/* Add-ons */
+.wp-block {
+	max-width: 1440px;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mw-960 {
+	max-width: 960px;
+}

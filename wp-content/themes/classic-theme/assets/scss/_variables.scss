@@ -1,0 +1,38 @@
+$primary:           #c99587;
+$secondary:         #054266;
+
+$spacers: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.50rem,
+    3: 1.00rem,
+    4: 2.00rem,
+    5: 3.00rem,
+    6: 4.00rem,
+    7: 5.00rem,
+    8: 6.00rem,
+    9: 7.50rem,
+    fluid: 8.33333%
+);
+
+$aspect-ratios: ();
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 500px,
+    md: 750px,
+    lg: 1000px,
+    xl: 1250px,
+    xxl: 1500px
+);
+
+$container-max-widths: (
+    sm: 572px,
+    md: 752px,
+    lg: 992px,
+    xl: 1232px,
+    xxl: 1472px
+);
+
+$grid-gutter-width:         2rem;
+$enable-negative-margins:   true;
